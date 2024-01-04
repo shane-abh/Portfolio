@@ -5,13 +5,13 @@
 //     var mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
 //     var mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
     
-//     var radialGradient = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #141416 40%, rgba(0, 0, 113, 0.64) 100%, rgba(18, 18, 203, 0.64) 10%)';
+//     var radialGradient = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #141416 90%, rgba(0, 0, 113, 0.64) 100%, rgba(18, 18, 203, 0.64) 10%)';
     
 //     document.body.style.background = radialGradient;
 // });
 
-var link = document.getElementById("back-to-top");
-var amountScrolled = 250;
+let link = document.getElementById("back-to-top");
+let amountScrolled = 250;
 
 window.addEventListener('scroll', function(e) {
     if (window.pageYOffset > amountScrolled) {
@@ -23,21 +23,6 @@ window.addEventListener('scroll', function(e) {
     }
 });
 
-// link.addEventListener('click', function(e) {
-//     e.preventDefault();
 
-//     var distance = 0 - window.pageYOffset;
-//     var increments = distance / (1000 / 16);
 
-//     function animateScroll() {
-//         window.scrollBy(0, -7);
-//         if (window.scrollY <= document.body.offsetTop) {
-//             cancelAnimationFrame(runAnimation);
-//         } else {
-//             requestAnimationFrame(animateScroll);
-//         }
-//     }
 
-//     // Start the animation
-//     var runAnimation = requestAnimationFrame(animateScroll);
-// });
