@@ -127,6 +127,7 @@ section {
     height: 50px;
     box-sizing: border-box;
     border-radius: 50%;
+    cursor: pointer;
   }
 
   a.back-to-top {
@@ -227,6 +228,7 @@ section {
     margin: 1em 0;
     width: 2%;
     scroll-behavior: smooth;
+    cursor: pointer;
 }
 
 .down-arrow img{
@@ -443,6 +445,10 @@ section {
     /* border-radius: 1em; */
     
     max-width: fit-content;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 ::placeholder {
