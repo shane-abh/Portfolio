@@ -9,6 +9,33 @@
     
 //     document.body.style.background = radialGradient;
 // });
+document.addEventListener('DOMContentLoaded', function () {
+  var preloader = document.getElementById('preloader');
+
+  
+
+  setTimeout(function () {
+    
+    var h1 = document.createElement('h2');
+    h1.textContent = 'Shane Abraham';
+    preloader.innerHTML = '';
+    preloader.appendChild(h1);
+    
+    
+  }, 3000); // Adjust the time according to your animations
+
+  setTimeout(function () {
+    preloader.style.opacity = '0';
+  }, 6000);
+
+  setTimeout(function () {
+    preloader.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }, 9000);
+
+
+ 
+});
 
 let link = document.getElementById("back-to-top");
 let amountScrolled = 250;
