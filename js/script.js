@@ -75,3 +75,8 @@ tl.to(".about-img", {
 });
 
 
+let tl2 = gsap.timeline({
+  defaults: { ease: "power4.inOut", duration: 20},
+});
+
+tl2.fromTo(".down-arrow" ,{opacity: 0}, {opacity: 1, duration: 25});

@@ -500,6 +500,10 @@ a.back-to-top {
     margin: 0.4em 0;
 }
 
+.contact-me{
+    min-height: 50vh;
+}
+
 .contact-me p {
     text-align: left;
     font-size: 1.5em;
