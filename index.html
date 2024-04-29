@@ -59,7 +59,7 @@
       <section class="hero" id="hero">
         <div class="intro">
           <div class="intro-content">
-            <h1 class="title">Full stack software developer</h1>
+            <h1 class="title">Front end web developer</h1>
             <p>
               Discover design innovation and seamless web experiences. Elevate
               with web apps blending thoughtful design and dynamic development,
@@ -132,70 +132,308 @@
             >
           </p>
         </div>
-        <div class="projects">
-          <div class="project">
-            <div class="project-content">
-              <span>Ecommerce Application</span>
-              <h3>Loan Calculator</h3>
-              <p class="project-description">
-                Created using HTML, CSS, and JavaScript, my loan calculator app
-                uses Chart.js for cool charts. People can type in loan info like
-                amount, interest, time, down payment, and date. The app then
-                shows a clear payment plan and a schedule you can play with.
-              </p>
-              <p class="project-stack">
-                Easy for everyone to use, the app's design is simple. With
-                Chart.js, it also makes nice charts that help you see your loan
-                better. This project shows I can build things that are easy to
-                use, look good, and help people manage loans in a friendly way.
-              </p>
-              <a
-                target="_blank"
-                href="https://shane-abh.github.io/JavaScript-Loan-Calculator/webpages/loan_calculator.html"
-                class="project-demo-link"
-                >Demo</a
-              >
-              <a
-                target="_blank"
-                href="https://github.com/shane-abh/JavaScript-Loan-Calculator"
-                class="project-code-link"
-                >View Code</a
-              >
+
+        <div class="tab">
+          <button
+            class="tablinks"
+            onclick="openCity(event, 'JavaScript')"
+            id="defaultOpen"
+          >
+            JavaScript
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Android')">
+            Android
+          </button>
+          
+        </div>
+
+        <div class="tabcontent" id="JavaScript">
+          <div class="projects">
+            <div class="project">
+              <div class="project-content">
+                <span class="tagline">React JS</span>
+                <h3>Loan Calculator</h3>
+                <p class="project-description">
+                  Created using React JS to help users understand about
+                  Mortagage payments. Used Chart.js to create graphs and pie
+                  chart. Additional payments would help the users finish paying
+                  the loan earlier and save on interst payments. Users can also
+                  choose among three different themes they prefer.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-blue">React</span>
+                  <span class="tag tag-blue">Chart JS</span>
+                </div>
+
+                <a
+                  target="_blank"
+                  href="https://shane-abh.github.io/loan-calculator"
+                  class="project-demo-link"
+                  >Demo</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/loan-calculator"
+                  class="project-code-link"
+                  >View Code</a
+                >
+              </div>
+              <div class="project-image">
+                <img src="./images/Mortgage-Calculator.png" />
+              </div>
             </div>
-            <div class="project-image">
-              <img src="./images/loan-calc-mockup.png" />
+
+            <div class="project reverse">
+              <div class="project-content">
+                <span class="tagline">MERN Stack</span>
+                <h3>Employee Management System</h3>
+                <p class="project-description">
+                  This project is an Employee Management System where users can
+                  add, edit, and delete employees. They can also view details
+                  such as their retirement date and other details. One
+                  constraint that we added was that an Employee that is working
+                  cannot be deleted, instead they have to be retired.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-ems">Mongo DB</span>
+                  <span class="tag tag-ems">Express</span>
+                  <span class="tag tag-ems">GraphQL</span>
+                  <span class="tag tag-ems">React JS</span>
+                  <span class="tag tag-ems">Node JS</span>
+                  <span class="tag tag-ems">Bootstrap</span>
+                </div>
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/Employee-Management-System"
+                  class="project-demo-link"
+                  >Demo</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/Employee-Management-System/tree/main"
+                  class="project-code-link"
+                  >View Code</a
+                >
+              </div>
+              <div class="project-image">
+                <img src="./images/EMS.png" />
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-content">
+                <span class="tagline">Vanilla JS</span>
+                <h3>Task Manager</h3>
+                <p class="project-description">
+                  This is a task management application created using vanilla
+                  JS. Users can add, delete, and update their tasks. Multiple
+                  people can be assigned by separating the name of the users
+                  with a comma. This project helped me learn the foundations of
+                  JS and how to modularize code by created libraries and
+                  classes.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-lightpurple">Vanilla JS</span>
+                  <span class="tag tag-lightpurple">HTML</span>
+                  <span class="tag tag-lightpurple">CSS</span>
+                </div>
+                <a
+                  target="_blank"
+                  href="https://shane-abh.github.io/JavaScript-Task-Manager/"
+                  class="project-demo-link"
+                  >Prototype</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/JavaScript-Task-Manager"
+                  class="project-code-link"
+                  >View Code</a
+                >
+              </div>
+              <div class="project-image">
+                <img src="./images/JS task manager.png" />
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="project reverse">
-            <div class="project-content">
-              <span>Android Ecommerce Application</span>
-              <h3>Sneakers E-commerce Application</h3>
-              <p class="project-description">
-                Built as a native Android app, this application is all about
-                selling fancy sneakers. With this app, users can easily check
-                out a variety of sneakers, add them to their cart, see all the
-                details about each pair, pick the right size, and then buy them
-                at checkout.
-              </p>
-              <p class="project-stack">
-                Built with: Android Studio, Java, XML for styling
-              </p>
-              <a
-                target="_blank"
-                href="https://www.figma.com/proto/9WiNM5VQVgAPZ7EbpXT4gG/Android-Project?page-id=0%3A1&type=design&node-id=63-38&viewport=666%2C-88%2C0.23&t=ye8qJCYcvW5k1Oqw-1&scaling=scale-down&starting-point-node-id=60%3A2&mode=design"
-                class="project-demo-link"
-                >Prototype</a
-              >
-              <a
-                target="_blank"
-                href="https://github.com/shane-abh/android-sneakers-ecommerce-app/tree/master"
-                class="project-code-link"
-                >View Code</a
-              >
+        <div class="tabcontent" id="Android">
+          <div class="projects">
+            <div class="project">
+              <div class="project-content">
+                <span class="tagline">Kotlin</span>
+                <h3>Luxury Watch App</h3>
+                <p class="project-description">
+                  This is an ecommerce android app for luxury watches. In this
+                  app, users can browser and search for available watches, view
+                  details of each watch, add them to cart, and checkout. This
+                  app was built as a part of a group project for our assignment.
+                  An interesting constraint we added is that users can view the
+                  products without logging in to the app.
+                </p>
+
+                <div class="tags">
+                  <span class="tag tag-androidBlue">Kotlin</span>
+                  <span class="tag tag-androidBlue">Firebase Auth</span>
+                  <span class="tag tag-androidBlue"
+                    >Firebase Realtime Database</span
+                  >
+                  <span class="tag tag-androidBlue">Firebase Storage</span>
+                  <span class="tag tag-androidBlue">XML</span>
+                </div>
+                <a
+                  target="_blank"
+                  href=" https://www.figma.com/proto/9WiNM5VQVgAPZ7EbpXT4gG/Android-Project?page-id=220%3A2&type=design&node-id=232-9&viewport=96%2C369%2C0.28&t=4LhBFlbI78k1Fg6p-1&scaling=scale-down&starting-point-node-id=232%3A9&mode=design"
+                  class="project-demo-link"
+                  >Prototype</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/luxury-watch"
+                  class="project-code-link"
+                  >View Code</a
+                >
+              </div>
+              <div class="project-image">
+                <img src="./images/Luxury Watch Project.png" />
+              </div>
             </div>
-            <div class="project-image">
-              <img src="./images/Drips ScreenShot.png" />
+
+            <div class="project reverse">
+              <div class="project-content">
+                <span class="tagline">Java</span>
+                <h3>Sneakers E-commerce Application</h3>
+                <p class="project-description">
+                  Built as a native Android app, this application is all about
+                  selling fancy sneakers. With this app, users can easily check
+                  out a variety of sneakers, add them to their cart, see all the
+                  details about each pair, pick the right size, and then buy
+                  them at checkout.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-red">Android</span>
+                  <span class="tag tag-red">Java</span>
+                  <span class="tag tag-red">XML</span>
+                </div>
+                <a
+                  target="_blank"
+                  href="https://www.figma.com/proto/9WiNM5VQVgAPZ7EbpXT4gG/Android-Project?page-id=0%3A1&type=design&node-id=63-38&viewport=666%2C-88%2C0.23&t=ye8qJCYcvW5k1Oqw-1&scaling=scale-down&starting-point-node-id=60%3A2&mode=design"
+                  class="project-demo-link"
+                  >Prototype</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/android-sneakers-ecommerce-app/tree/master"
+                  class="project-code-link"
+                  >View Code</a
+                >
+              </div>
+              <div class="project-image">
+                <img src="./images/Drips ScreenShot.png" />
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-content">
+                <span class="tagline">Flutter</span>
+                <h3>Clothing E-commerce Application</h3>
+                <p class="project-description">
+                  This is a mini e-commerce app built using flutter. In this
+                  app, users will be able to view products, view detail of each
+                  project, and checkout. These were the requirements of the
+                  project and only had a short period of time. My main aim was
+                  to learn how to design using flutter and learn how to navigate
+                  between pages.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-androidOrange">Flutter</span>
+                  <span class="tag tag-androidOrange">Design</span>
+                </div>
+                <a
+                  target="_blank"
+                  href="https://www.figma.com/proto/9WiNM5VQVgAPZ7EbpXT4gG/Android-Project?page-id=385%3A9&type=design&node-id=457-130&viewport=653%2C-242%2C0.25&t=MkRM2O6zUgE5mmHj-1&scaling=scale-down&starting-point-node-id=457%3A130&mode=design"
+                  class="project-demo-link"
+                  >Prototype</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/ecommerce-fashion-project/tree/main"
+                  class="project-code-link"
+                  >View Code</a
+                >
+              </div>
+              <div class="project-image">
+                <img src="./images/Flutter Project.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabcontent" id="UI/UX">
+          <div class="projects">
+            <div class="project">
+              <div class="project-content">
+                <span class="tagline">Ecommerce Application</span>
+                <h3>Loan Calculator</h3>
+                <p class="project-description">
+                  Created using React JS to help users understand about
+                  Mortagage payments. Used Chart.js to create graphs and pie
+                  chart. Additional payments would help the users finish paying
+                  the loan earlier and save on interst payments. Users can also
+                  choose among three different themes they prefer.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-lightpurple">Android</span>
+                  <span class="tag tag-lightpurple">HTML</span>
+                  <span class="tag tag-lightpurple">CSS</span>
+                </div>
+                <a
+                  target="_blank"
+                  href="https://shane-abh.github.io/loan-calculator"
+                  class="project-demo-link"
+                  >Demo</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/loan-calculator"
+                  class="project-code-link"
+                  >View Code</a
+                >
+              </div>
+              <div class="project-image">
+                <img src="./images/Mortgage-Calculator.png" />
+              </div>
+            </div>
+
+            <div class="project reverse">
+              <div class="project-content">
+                <span class="tagline">Android Ecommerce Application</span>
+                <h3>Sneakers E-commerce Application</h3>
+                <p class="project-description">
+                  Built as a native Android app, this application is all about
+                  selling fancy sneakers. With this app, users can easily check
+                  out a variety of sneakers, add them to their cart, see all the
+                  details about each pair, pick the right size, and then buy
+                  them at checkout.
+                </p>
+                <p class="project-stack">
+                  Built with: Android Studio, Java, XML for styling
+                </p>
+                <a
+                  target="_blank"
+                  href="https://www.figma.com/proto/9WiNM5VQVgAPZ7EbpXT4gG/Android-Project?page-id=0%3A1&type=design&node-id=63-38&viewport=666%2C-88%2C0.23&t=ye8qJCYcvW5k1Oqw-1&scaling=scale-down&starting-point-node-id=60%3A2&mode=design"
+                  class="project-demo-link"
+                  >Prototype</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/shane-abh/android-sneakers-ecommerce-app/tree/master"
+                  class="project-code-link"
+                  >View Code</a
+                >
+              </div>
+              <div class="project-image">
+                <img src="./images/Drips ScreenShot.png" />
+              </div>
             </div>
           </div>
         </div>
@@ -223,11 +461,11 @@
               improvement in data retrieval and application performance.
             </p>
             <div class="tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">React</span>
-              <span class="tag">Docker</span>
-              <span class="tag">Prisma</span>
-              <span class="tag">GraphQL</span>
+              <span class="tag tag-default">TypeScript</span>
+              <span class="tag tag-default">React</span>
+              <span class="tag tag-default">Docker</span>
+              <span class="tag tag-default">Prisma</span>
+              <span class="tag tag-default">GraphQL</span>
             </div>
           </div>
         </div>
@@ -249,9 +487,9 @@
               to enhance their reach and attract new clients.
             </p>
             <div class="tags">
-              <span class="tag">UI/UX</span>
-              <span class="tag">CMS</span>
-              <span class="tag">Web Design</span>
+              <span class="tag tag-default">UI/UX</span>
+              <span class="tag tag-default">CMS</span>
+              <span class="tag tag-default">Web Design</span>
             </div>
           </div>
         </div>
@@ -274,11 +512,11 @@
               dashboard.
             </p>
             <div class="tags">
-              <span class="tag">Java</span>
-              <span class="tag">Spring-boot</span>
-              <span class="tag">Flutter</span>
-              <span class="tag">Mongo DB</span>
-              <span class="tag">React JS</span>
+              <span class="tag tag-default">Java</span>
+              <span class="tag tag-default">Spring-boot</span>
+              <span class="tag tag-default">Flutter</span>
+              <span class="tag tag-default">Mongo DB</span>
+              <span class="tag tag-default">React JS</span>
             </div>
           </div>
         </div>
@@ -300,9 +538,9 @@
               understanding of the organization's workflow processes.
             </p>
             <div class="tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
+              <span class="tag tag-default">JavaScript</span>
+              <span class="tag tag-default">HTML</span>
+              <span class="tag tag-default">CSS</span>
             </div>
           </div>
         </div>
