@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Building2, Calendar } from "lucide-react";
+import { Building2, Calendar, Github, Linkedin, Mail } from "lucide-react";
 import web_dev from "../assets/web_dev_avatar.png";
 import { useDarkMode } from "../context/DarkModeContext";
 interface Experience {
@@ -63,6 +63,15 @@ export function About() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   return (
     <div className="">
+      <div className="absolute  left-1/2 -translate-x-1/4 flex flex-col items-center w-full">
+              <div
+                className={`absolute w-screen h-[400px] ${
+                  isDarkMode ? "gradient-oval-dark" : "gradient-oval-light"
+                } -z-10 -top-32`}
+              />
+
+            
+            </div>
       <section
         className="container mx-auto max-w-screen-md  py-20  lg:max-w-screen-lg px-4"
         id="about"
@@ -112,6 +121,28 @@ export function About() {
               Feel free to explore my projects or reach out if you'd like to
               connect or collaborate. I'd love to hear from you!
             </p>
+            <div className="flex  ">
+              <div className=" flex gap-6  text-gray-500 ">
+                <a
+                  href="https://github.com/shane-abh"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  <Github className="w-8 h-8" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/shane-abh/"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  <Linkedin className="w-8 h-8" />
+                </a>
+                <a
+                  href="mailto:mailto:shaneabh777@gmail.com"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  <Mail className="w-8 h-8" />
+                </a>
+              </div>
+            </div>
           </div>
           <div>
             <img src={web_dev} />

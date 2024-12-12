@@ -19,11 +19,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </p>
         <div className="w-full h-full bg-black rounded-md overflow-hidden">
-          <div className="w-full h-[47px] bg-[#474747] px-4 py-0 flex items-center">
+          <div className="w-full h-[] md:h-[30px] bg-[#474747] px-4 py-0 flex items-center">
             <div className="flex space-x-1">
-              <div className="w-[10px] h-[10px] rounded-full bg-[#CA0000]"></div>
-              <div className="w-[10px] h-[10px] rounded-full bg-[#F9E000]"></div>
-              <div className="w-[10px] h-[10px] rounded-full bg-[#00DD16]"></div>
+              <div className="w-[5px] h-[5px] rounded-full bg-[#CA0000]"></div>
+              <div className="w-[5px] h-[5px] rounded-full bg-[#F9E000]"></div>
+              <div className="w-[5px] h-[5px] rounded-full bg-[#00DD16]"></div>
             </div>
           </div>
           <img

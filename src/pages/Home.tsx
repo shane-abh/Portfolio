@@ -12,24 +12,19 @@ import { TypeAnimation } from "react-type-animation";
 import { useDarkMode } from "../context/DarkModeContext";
 
 export function Home() {
- 
   const { isDarkMode, toggleDarkMode } = useDarkMode();
-  
 
   const particles = Array.from({ length: 350 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
     size: Math.random() * 10 + 5,
-    speed: Math.random() * 3 + 2
+    speed: Math.random() * 3 + 2,
   }));
-
- 
 
   const skillIcons = [
     { name: "React", icon: "⚛️" },
     { name: "JavaScript", icon: "𝗝𝗦" },
-    { name: "TypeScript", icon: "𝗧𝗦" },
     { name: "TypeScript", icon: "𝗧𝗦" },
     { name: "HTML", icon: "🌐" },
     { name: "CSS", icon: "🎨" },
@@ -56,7 +51,7 @@ export function Home() {
               className={`absolute rounded-full ${
                 isDarkMode
                   ? "bg-gradient-to-r from-blue-300 to-purple-400"
-                  : "bg-gradient-to-r from-blue-200 to-purple-300"
+                  : "bg-gradient-to-r from-blue-900 to-purple-300"
               } opacity-20`}
               style={{
                 left: `${particle.x}%`,
@@ -80,7 +75,7 @@ export function Home() {
           ))}
           <Header />
 
-          <main className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+          <main className="min-h-screen flex flex-col items-center justify-center px-4 relative ">
             <div className="hidden xl:flex justify-between">
               {skillIcons.map((skill, index) => {
                 const angle = (index / skillIcons.length) * 2 * Math.PI; // Angle for each icon
@@ -103,9 +98,9 @@ export function Home() {
                     animate={{
                       // Icons float slightly in their position
                       x: radius * Math.cos(angle + Math.random() * 0.1), // Slight change in angle for movement
-                      y: radius * Math.sin(angle + Math.random() * 0.1), // Slight change in angle for movement
+                      y: radius * Math.sin(angle + Math.random() * 0.5), // Slight change in angle for movement
                       transition: {
-                        duration: Math.random() * 1 + 2, // Smooth transitions
+                        duration: Math.random() * 1 + 20, // Smooth transitions
                         repeat: Infinity,
                         repeatType: "mirror",
                       },
@@ -191,7 +186,7 @@ export function Home() {
 
               <div
                 className={`${
-                  isDarkMode ? "text-gray-400" : "text-gray-600"
+                  isDarkMode ? "text-white" : "text-gray-600"
                 } flex flex-col items-center gap-2 scroll-prompt pb-12`}
               >
                 <span className="text-sm font-body">Scroll to explore</span>
@@ -199,10 +194,10 @@ export function Home() {
               </div>
             </div>
           </main>
-          <About  />
+          <About />
           <Projects />
           <CourseExprience />
-          <div className="text-center max-w-screen-sm mx-auto p-4 ">
+          <div className="text-center max-w-screen-sm mx-auto p-4 mb-16">
             <h3 className="text-2xl p-4 font-semibold font-title">
               Interested in collaborating with me?
             </h3>
@@ -213,21 +208,21 @@ export function Home() {
               of my socials.
             </p>
             <div className="flex place-items-center ">
-              <div className="hidden md:flex gap-6 mx-auto p-4 text-gray-200  ">
+              <div className=" flex gap-6 mx-auto p-4 text-gray-200  ">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/shane-abh"
                   className="hover:text-blue-400 transition-colors"
                 >
                   <Github className="w-8 h-8" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/shane-abh/"
                   className="hover:text-blue-400 transition-colors"
                 >
                   <Linkedin className="w-8 h-8" />
                 </a>
                 <a
-                  href="mailto:contact@example.com"
+                  href="mailto:mailto:shaneabh777@gmail.com"
                   className="hover:text-blue-400 transition-colors"
                 >
                   <Mail className="w-8 h-8" />

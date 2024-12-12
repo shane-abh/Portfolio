@@ -15,13 +15,13 @@ export const Header = () => {
 
             <div className="flex items-center gap-8">
               <div className="hidden md:flex gap-6">
-                <a href="https://github.com" className="hover:text-blue-400 transition-colors">
+                <a href="https://github.com/shane-abh" className="hover:text-blue-400 transition-colors" target='_blank'>
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com" className="hover:text-blue-400 transition-colors">
+                <a href="https://www.linkedin.com/in/shane-abh/" className="hover:text-blue-400 transition-colors" target='_blank'>
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="mailto:contact@example.com" className="hover:text-blue-400 transition-colors">
+                <a href="mailto:shaneabh777@gmail.com" className="hover:text-blue-400 transition-colors" target='_blank'>
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
