@@ -149,7 +149,7 @@ export const CourseContent: React.FC = () => {
   ];
 
   return (
-    <div className="text-white bg-[#141416] py-16">
+    <div className="text-white bg-[#141416] pt-16">
       <Header />
       <div className="  text-white py-12 font-body">
         <div className="container mx-auto px-4 max-w-4xl">

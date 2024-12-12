@@ -6,12 +6,12 @@ import employeeManagementSystem from "../assets/projects/EMS.png";
 import EMSArch from "../assets/projects/EMS_arch.png";
 import greatHomes_Arch from "../assets/projects/GreatHomes-Arch.png";
 
-
 const projects = [
   {
     id: 1,
     title: "Expense Categorization API",
-    description: "API to categorize expenses based on user input.",
+    description:
+      "An AI-driven tool that automatically categorizes expenses with precision, saving time and eliminating manual errors.",
 
     imageUrl: expense_categorizer_img,
     video: expense_categorizer_demo,
@@ -75,7 +75,7 @@ const projects = [
     id: 2,
     title: "Great Homes",
     description:
-      "A real estate website designed to make things efficient and includes a mortgage calculator. ",
+      "An all-in-one real estate platform to find properties, calculate mortgages, and manage listings effortlessly. ",
 
     imageUrl: greatHomes,
     video: null,
@@ -172,6 +172,7 @@ const projects = [
   {
     id: 3,
     title: "Employee Management System",
+    description : "A centralized solution for managing employee data, tracking performance, and streamlining HR processes with ease.",
     imageUrl: employeeManagementSystem,
     video: null,
     overview: (
