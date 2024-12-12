@@ -60,7 +60,7 @@ const experiences: Experience[] = [
 
 export function About() {
   const [openId, setOpenId] = useState<number | null>(null);
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { isDarkMode } = useDarkMode();
   return (
     <div className="">
       <div className="absolute  left-1/2 -translate-x-1/4 flex flex-col items-center w-full">

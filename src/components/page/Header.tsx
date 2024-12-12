@@ -45,7 +45,7 @@ export const Header = () => {
             </a>
           </div>
           <a
-            href="../../../public/resume/Shane Abraham CV.pdf"
+            href="/resume/Shane Abraham CV.pdf"
             className="px-4 py-2 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded-full transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"

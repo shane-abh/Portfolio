@@ -9,7 +9,7 @@ import Footer from "../components/page/Footer";
 
 export default function ProjectDetail() {
   const { id } = useParams();
-  const project = projects.find((project) => project.id === parseInt(id, 10));
+  const project = id ? projects.find((project) => project.id === parseInt(id, 10)) : undefined;
 
   if (!project) {
     return <div>Project not found!</div>; // Fallback if project isn't found
