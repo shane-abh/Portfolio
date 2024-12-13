@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import ProjectDetail from "./pages/ProjectDetail";
@@ -12,8 +12,6 @@ const App = () => {
 
   return (
     <AnimatePresence mode="wait">
-      {" "}
-      {/* Ensure animations wait for the previous page to exit */}
       <DarkModeProvider>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
@@ -29,11 +27,11 @@ const App = () => {
 };
 
 const Root = () => (
-  <BrowserRouter>
+  <HashRouter>
     <ScrollToTop />
     <ScrollToSection />
     <App />
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default Root;
