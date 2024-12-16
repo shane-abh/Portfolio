@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-scroll";
 
 export const Header = () => {
   return (
@@ -9,15 +10,30 @@ export const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-12">
-          <a href="#home" className=" transition-colors">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className=" transition-colors cursor-pointer"
+          >
             Home
-          </a>
-          <a href="#about" className=" transition-colors">
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className=" transition-colors cursor-pointer"
+          >
             About
-          </a>
-          <a href="#projects" className=" transition-colors">
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className=" transition-colors cursor-pointer"
+          >
             Projects
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center gap-8">

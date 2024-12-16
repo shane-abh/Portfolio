@@ -10,6 +10,7 @@ import CourseExprience from "../components/page/CourseExprience";
 import Footer from "../components/page/Footer";
 import { TypeAnimation } from "react-type-animation";
 import { useDarkMode } from "../context/DarkModeContext";
+import { Link } from "react-scroll";
 
 export function Home() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
@@ -156,7 +157,8 @@ export function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <a href="#projects">View My Work</a>
+                  
+                  <Link to="projects">View My Work</Link>
                 </motion.button>
               </div>
             </div>
