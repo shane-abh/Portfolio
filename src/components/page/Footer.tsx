@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 const Footer = () => {
   return (
     <footer className="bg-[#000073] rounded-lg shadow  ">
@@ -7,23 +9,40 @@ const Footer = () => {
             href="https://flowbite.com/"
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
-            <h1 className="font-title text-3xl font-bold text-white">SHANE ABRAHAM</h1>
+            <h1 className="font-title text-3xl font-bold text-white">
+              SHANE ABRAHAM
+            </h1>
           </a>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium font-body text-gray-300 sm:mb-0 ">
             <li>
-              <a href="/" className="hover:underline me-4 md:me-6">
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className=" transition-colors cursor-pointer"
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#about" className="hover:underline me-4 md:me-6">
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className=" transition-colors cursor-pointer"
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#projects" className="hover:underline me-4 md:me-6">
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className=" transition-colors cursor-pointer"
+              >
                 Projects
-              </a>
+              </Link>
             </li>
             {/* <li>
               <a href="#" className="hover:underline">
