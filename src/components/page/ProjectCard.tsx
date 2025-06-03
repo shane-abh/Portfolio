@@ -18,6 +18,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-lg text-black w-full md:max-w-[620px] font-body">
           {description}
         </p>
+
+        <div className=" ">
+          <span className="text-black font-semibold hover:text-blue-600 transition-colors cursor-pointer">
+            Click to explore more →
+          </span>
+        </div>
         <div className="w-full h-full bg-black rounded-md overflow-hidden">
           <div className="w-full h-[] md:h-[30px] bg-[#474747] px-4 py-0 flex items-center">
             <div className="flex space-x-1">

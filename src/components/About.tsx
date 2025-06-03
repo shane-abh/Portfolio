@@ -13,6 +13,18 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: 1,
+    position: "Software Developer",
+    duration: "Feb 2025 - Present",
+    company: "Flomaru Ltd., Waterloo",
+    responsibilities: [
+      "Developed a Minimum Viable Product (MVP) using React, Django, and PostgreSQL, delivering a full-stack web application aligned with early business goals.",
+      "Deployed the app on Google Cloud (Compute Engine) for scalable, production-ready performance, ensuring 99.9% uptime.",
+      "Mentored co-op students, translating business needs into technical tasks and supporting development, fostering teamwork and knowledge sharing.",
+      "Operated in a fast-paced Agile environment, contributing to iterative planning, sprint reviews, and rapid prototyping.",
+    ],
+  },
+  {
+    id: 2,
     position: "Web & App Assistant",
     duration: "Jan 2024 - Aug 2024",
     company: "Conestoga Students Inc.",
@@ -24,7 +36,7 @@ const experiences: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     position: "Frontend Developer",
     duration: "March 2024 - Aug 2024",
     company: "Empowered Futures (Volunteer)",
@@ -35,7 +47,7 @@ const experiences: Experience[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     position: "Software Developer",
     duration: "Nov 2022 - Feb 2023",
     company: "Flydubai",
@@ -46,7 +58,7 @@ const experiences: Experience[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     position: "Software Tester",
     duration: "Aug 2022 - Oct 2022",
     company: "Epromis Solutions LLC",

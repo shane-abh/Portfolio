@@ -5,10 +5,79 @@ import greatHomes from "../assets/projects/great-homes.png";
 import employeeManagementSystem from "../assets/projects/EMS.png";
 import EMSArch from "../assets/projects/EMS_arch.png";
 import greatHomes_Arch from "../assets/projects/GreatHomes-Arch.png";
+import aiPortfolioAssistant from "../assets/projects/AI_stock_assistant.png";
+// import aiPortfolioArch from "../assets/projects/ai-portfolio-arch.png";
 
 const projects = [
   {
     id: 1,
+    title: "AI Portfolio Assistant",
+    description: "An AI-powered stock analysis and portfolio management tool that provides intelligent insights and recommendations for better investment decisions.",
+    imageUrl: aiPortfolioAssistant,
+    video: null,
+    overview: (
+      <div className="max-w-screen-md">
+        <p>
+          The <strong>AI Portfolio Assistant</strong> is a comprehensive stock analysis and portfolio management tool that leverages artificial intelligence to provide users with detailed insights into individual stocks and investment portfolios. The application helps investors make informed decisions by combining traditional financial metrics with AI-powered analysis.
+        </p>
+        <p>
+          Built with <strong>Next.js</strong> and powered by <strong>LangChain</strong> and <strong>LLM</strong> technology, this platform offers a sophisticated yet user-friendly interface for analyzing stocks, managing portfolios, and receiving AI-generated investment recommendations.
+        </p>
+        <p>
+          The system evaluates stocks based on multiple dimensions including valuation, growth potential, profitability, and risk assessment, providing users with comprehensive insights to make better investment decisions.
+        </p>
+      </div>
+    ),
+    problemStatement: (
+      <div className="max-w-screen-md">
+        <h3 className="font-bold text-xl py-4">The Challenge:</h3>
+        <p className="mb-4">
+          Investors often struggle to make informed decisions due to the overwhelming amount of financial data and the complexity of market analysis. Traditional tools either provide too much raw data without insights or offer oversimplified recommendations without proper analysis.
+        </p>
+        <p className="mb-4">
+          The key challenges include:
+        </p>
+        <ul className="list-disc mx-4 my-4">
+          <li>Difficulty in analyzing multiple data points across different timeframes</li>
+          <li>Lack of comprehensive portfolio analysis and risk assessment</li>
+          <li>Time-consuming process of gathering and interpreting financial data</li>
+          <li>Need for personalized investment recommendations based on risk profile</li>
+        </ul>
+        <p className="mb-4">
+          The AI Portfolio Assistant addresses these challenges by:
+        </p>
+        <ul className="list-disc mx-4 my-4">
+          <li>Providing AI-powered analysis of stocks and portfolios</li>
+          <li>Generating personalized investment recommendations</li>
+          <li>Offering comprehensive risk assessment and growth potential analysis</li>
+          <li>Automating the process of data gathering and interpretation</li>
+        </ul>
+      </div>
+    ),
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Recharts",
+      "LangChain",
+      "Groq LLM",
+      "Alpha Vantage API",
+      "Tiingo API"
+    ],
+    architecture: null,
+    features: [
+      "Stock Analysis Dashboard with comprehensive metrics and technical indicators",
+      "AI-powered investment recommendations and scoring",
+      "Portfolio analysis with diversification and risk assessment",
+      "Interactive charts for visualizing stock data and trends",
+      "Real-time data integration from multiple financial APIs",
+      "AI-generated investment thesis and insights"
+    ],
+    githubUrl: "https://github.com/shane-abh/AI-portfolio-assistant"
+  },
+  {
+    id: 2,
     title: "Expense Categorization API",
     description:
       "An AI-driven tool that automatically categorizes expenses with precision, saving time and eliminating manual errors.",
@@ -69,10 +138,10 @@ const projects = [
       "Utilizes the Llama 3.2b model to interpret the context behind descriptions, eliminating the need for static keywords",
       "Adapts to various expense types, enhancing categorization accuracy with natural language processing (NLP)",
     ],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/shane-abh/expense-categorizer",
   },
   {
-    id: 2,
+    id: 3,
     title: "Great Homes",
     description:
       "An all-in-one real estate platform to find properties, calculate mortgages, and manage listings effortlessly. ",
@@ -167,10 +236,10 @@ const projects = [
       "Social sign in",
       "Create, update, and delete your listings",
     ],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/shane-abh/Great-Homes",
   },
   {
-    id: 3,
+    id: 4,
     title: "Employee Management System",
     description : "A centralized solution for managing employee data, tracking performance, and streamlining HR processes with ease.",
     imageUrl: employeeManagementSystem,
@@ -267,45 +336,8 @@ const projects = [
       "Create, update, and delete employees",
       "Check employees close to the retirement dates",
     ],
-    githubUrl: "https://github.com",
-  },
-  // {
-  //   id: 4,
-  //   title: "Job Portal",
-  //   imageUrl: "https://example.com/images/job-portal.jpg",
-  //   overview:
-  //     "A job portal connecting employers with potential job seekers, including resume parsing and job recommendation features.",
-  //   problemStatement:
-  //     "Job seekers often find it difficult to discover suitable jobs, and employers want to screen candidates effectively. A centralized job portal with intelligent filtering can address these issues.",
-  //   techStack: ["Angular", "Spring Boot", "MySQL", "Elasticsearch"],
-  //   architecture:
-  //     "This project employs a layered architecture with Spring Boot for backend services, MySQL for data storage, and Elasticsearch for fast job searches.",
-  //   features: [
-  //     "Job search with advanced filters",
-  //     "Resume upload and parsing",
-  //     "Automated job recommendations",
-  //     "Employer dashboard for posting jobs",
-  //   ],
-  //   githubUrl: "https://github.com",
-  // },
-  // {
-  //   id: 5,
-  //   title: "Travel Booking System",
-  //   imageUrl: "https://example.com/images/travel-booking.jpg",
-  //   overview:
-  //     "A platform to book flights, hotels, and rental cars, with an integrated itinerary planner.",
-  //   problemStatement:
-  //     "Travelers need a unified platform to plan their trips, book accommodations, and manage itineraries. An all-in-one platform simplifies the booking process.",
-  //   techStack: ["React", "Ruby on Rails", "PostgreSQL", "AWS"],
-  //   architecture:
-  //     "The system follows an MVC architecture with a Rails backend and a React frontend, hosted on AWS for scalability.",
-  //   features: [
-  //     "Flight, hotel, and car rental booking",
-  //     "Dynamic pricing and availability updates",
-  //     "Itinerary planner and reminders",
-  //     "User reviews and recommendations",
-  //   ],
-  // },
+    githubUrl: "https://github.com/shane-abh/Employee-Management-System",
+  }
 ];
 
 export default projects;
