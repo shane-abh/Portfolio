@@ -77,7 +77,7 @@ export default function ProjectDetail() {
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">Architecture</h2>
-            <img src={project.architecture} />
+            {project.architecture != null ? <img src={project.architecture} /> : null}
           </section>
 
           <section className="mb-12">
