@@ -60,12 +60,13 @@ const experiences: Experience[] = [
   {
     id: 5,
     position: "Software Tester",
-    duration: "Aug 2022 - Oct 2022",
+    duration: "June 2021 - Oct 2022",
     company: "Epromis Solutions LLC",
     responsibilities: [
-      "Created dynamic business reports using Stimulsoft, resulting in improved data visualization for business decision-making.",
-      "Collaborated with the senior development team to gather data from SQL databases, ensuring the accuracy of the reports.",
-      "Validated software usability by writing Selenium scripts to automate testing processes, enhancing the reliability and consistency of user acceptance testing (UAT) results.",
+      "Developed and executed comprehensive manual and exploratory test cases for web applications, ensuring thorough test coverage and adherence to acceptance criteria in an Agile/Scrum environment",
+      "Improved reporting accuracy by designing SQL and NoSQL queries for Stimulsoft dashboards, allowing management to make faster, data-driven decisions.",
+      "Designed and implemented automated regression testing using Selenium and JUnit, resulting in a 30% reduction in manual testing effort and significantly improving release velocity.",
+      "Managed defect tracking and verification within Jira and maintained test cases in TestRail, ensuring accurate documentation and clear communication of issues."
     ],
   },
 ];
