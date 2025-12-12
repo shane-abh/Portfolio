@@ -11,7 +11,7 @@ const CourseExprience = () => {
 
         <div className="space-y-0 ">
           <Link
-            to={`/CognnizantJavaFullStackPathway`}
+            to="/courses/cognizant-java-full-stack"
             className="flex flex-col items-center gap-8 w-3/4 mx-auto"
           >
             <CourseCard />

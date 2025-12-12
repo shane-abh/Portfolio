@@ -7,7 +7,7 @@ const Hero2 = () => {
     <div className="absolute inset-0 bg-gradient-to-br from-[#AD00FF30]  to-[#001AFF1A] backdrop-blur-3xl"></div>
 
     {/* Content container */}
-    <div className="relative  max-w-screen-xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center justify-between h-full">
+    <div className="relative max-w-[1030px] mx-auto px-4 py-12 flex flex-col md:flex-row items-center justify-between h-full">
       {/* Text content */}
       <div className="md:w-2/3 space-y-6">
         <h2 className="text-4xl md:text-5xl font-bold text-white">About Me</h2>

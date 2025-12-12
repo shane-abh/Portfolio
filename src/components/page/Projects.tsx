@@ -23,7 +23,7 @@ export function Projects() {
             key={project.id}
             to={`/projects/${project.id}`}
             state={project.title} // Passing project as state
-            className="flex flex-col items-center gap-8 w-3/4 mx-auto"
+            className="flex flex-col items-center gap-8 w-full mx-auto"
           >
             <ProjectCard
               title={project.title}

@@ -1,10 +1,11 @@
+import { useMemo } from "react";
 import { ChevronDown, Github, Linkedin, Mail, Moon, Sun } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { About } from "../components/About";
 import { Projects } from "../components/page/Projects";
 import "../App.css";
 import "../index.css";
 import { Header } from "../components/page/Header";
-// import Hero2 from './components/Hero2';
 import { motion } from "framer-motion";
 import CourseExprience from "../components/page/CourseExprience";
 import Footer from "../components/page/Footer";
@@ -15,21 +16,35 @@ import { Link } from "react-scroll";
 export function Home() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
-  const particles = Array.from({ length: 350 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 10 + 5,
-    speed: Math.random() * 3 + 2,
-  }));
+  // Memoize particles to prevent recreation on every render
+  // Reduced count for better performance on mobile devices
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 200 }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * 10 + 5,
+        speed: Math.random() * 3 + 2,
+        // Pre-calculate animation values
+        animX: [0, Math.random() * 100 - 50, 0],
+        animY: [0, Math.random() * 100 - 50, 0],
+        animScale: [1, Math.random() + 0.5, 1],
+        duration: Math.random() + 5,
+      })),
+    []
+  );
 
-  const skillIcons = [
-    { name: "React", icon: "⚛️" },
-    { name: "JavaScript", icon: "𝗝𝗦" },
-    { name: "TypeScript", icon: "𝗧𝗦" },
-    { name: "HTML", icon: "🌐" },
-    { name: "CSS", icon: "🎨" },
-  ];
+  const skillIcons = useMemo(
+    () => [
+      { name: "React", icon: "⚛️" },
+      { name: "JavaScript", icon: "𝗝𝗦" },
+      { name: "TypeScript", icon: "𝗧𝗦" },
+      { name: "HTML", icon: "🌐" },
+      { name: "CSS", icon: "🎨" },
+    ],
+    []
+  );
 
   return (
     <div
@@ -37,6 +52,44 @@ export function Home() {
         isDarkMode ? "bg-[#000063] text-white" : "bg-[#e6e6ff] text-[#000063]"
       } transition-colors duration-500  `}
     >
+      <Helmet>
+        {/* Primary Meta Tags - Job Search Optimized */}
+        <title>Shane Abraham | Full Stack Software Developer | Open to Work</title>
+        <meta
+          name="description"
+          content="Shane Abraham - Full Stack Software Developer seeking opportunities. Expertise in React, TypeScript, Java Spring Boot, Node.js, Python, and AI/ML. Based in Waterloo, Ontario. Open to remote and hybrid roles."
+        />
+        <meta
+          name="keywords"
+          content="Shane Abraham, Software Developer, Full Stack Developer, React Developer, Java Developer, Frontend Developer, Backend Developer, Web Developer, Waterloo Ontario, Canada, Open to Work, Available for Hire, TypeScript, Node.js, Python, AI Developer"
+        />
+        <meta name="author" content="Shane Abraham" />
+        
+        {/* Open Graph / LinkedIn */}
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Shane Abraham | Full Stack Software Developer | Open to Work" />
+        <meta
+          property="og:description"
+          content="Full Stack Developer specializing in React, TypeScript, Java Spring Boot, and AI-powered applications. Based in Waterloo, Ontario. Open to opportunities."
+        />
+        <meta property="og:site_name" content="Shane Abraham - Software Developer Portfolio" />
+        <meta property="og:image" content="https://shane-abh.github.io/Portfolio/og-image.png" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Shane Abraham | Full Stack Software Developer" />
+        <meta
+          name="twitter:description"
+          content="Full Stack Developer specializing in React, TypeScript, and AI-powered applications. Open to opportunities."
+        />
+        <meta name="twitter:image" content="https://shane-abh.github.io/Portfolio/og-image.png" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#000063" />
+        <link rel="canonical" href="https://shane-abh.github.io/Portfolio/" />
+      </Helmet>
+      
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
@@ -59,19 +112,19 @@ export function Home() {
                 top: `${particle.y}%`,
                 width: particle.size,
                 height: particle.size,
+                willChange: "transform, opacity",
               }}
               animate={{
-                x: [0, Math.random() * 100 - 50, 0],
-                y: [0, Math.random() * 100 - 50, 0],
-                scale: [1, Math.random() + 0.5, 1],
+                x: particle.animX,
+                y: particle.animY,
+                scale: particle.animScale,
                 opacity: [0.2, 0.1, 0.2],
               }}
               transition={{
-                duration: Math.random() + 5,
+                duration: particle.duration,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              custom={particle.id}
             />
           ))}
           <Header />

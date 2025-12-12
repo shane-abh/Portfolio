@@ -158,7 +158,12 @@ export function About() {
             </div>
           </div>
           <div>
-            <img src={web_dev} />
+            <img 
+              src={web_dev} 
+              alt="Shane Abraham - Web Developer illustration"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>

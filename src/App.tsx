@@ -1,11 +1,15 @@
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Home from "./pages/Home";
-import ProjectDetail from "./pages/ProjectDetail";
+import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
-import CourseContent from "./components/page/CourseContent";
 import ScrollToSection from "./components/ScrollToSection";
 import { DarkModeProvider } from "./context/DarkModeContext";
+import LoadingSpinner from "./components/ui/LoadingSpinner";
+
+// Lazy load route components for better performance
+const Home = lazy(() => import("./pages/Home"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
+const CourseContent = lazy(() => import("./components/page/CourseContent"));
 
 const App = () => {
   const location = useLocation();
@@ -13,25 +17,33 @@ const App = () => {
   return (
     <AnimatePresence mode="wait">
       <DarkModeProvider>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
-          <Route
-            path="/CognnizantJavaFullStackPathway"
-            element={<CourseContent />}
-          />
-        </Routes>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
+            <Route
+              path="/courses/cognizant-java-full-stack"
+              element={<CourseContent />}
+            />
+          </Routes>
+        </Suspense>
       </DarkModeProvider>
     </AnimatePresence>
   );
 };
 
 const Root = () => (
-  <HashRouter>
+  <BrowserRouter
+    basename="/Portfolio"
+    future={{
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+    }}
+  >
     <ScrollToTop />
     <ScrollToSection />
     <App />
-  </HashRouter>
+  </BrowserRouter>
 );
 
 export default Root;

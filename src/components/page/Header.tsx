@@ -1,12 +1,13 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 export const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-[#000077]/0 backdrop-blur-sm p-4">
       <nav className="container mx-auto  py-4 flex justify-between items-center max-w-screen-lg">
         <div className="text-xl font-bold">
-          <a href="/">SA</a>
+          <RouterLink to="/">SA</RouterLink>
         </div>
 
         <div className="hidden md:flex items-center gap-12">
