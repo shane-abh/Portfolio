@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://shane-abh.github.io/Portfolio/</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Project: RAG Chat API -->
+  <url>
+    <loc>https://shane-abh.github.io/Portfolio/#/projects/1</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Project: AI Portfolio Assistant -->
+  <url>
+    <loc>https://shane-abh.github.io/Portfolio/#/projects/2</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Project: Expense Categorization API -->
+  <url>
+    <loc>https://shane-abh.github.io/Portfolio/#/projects/3</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Project: Great Homes -->
+  <url>
+    <loc>https://shane-abh.github.io/Portfolio/#/projects/4</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Project: Employee Management System -->
+  <url>
+    <loc>https://shane-abh.github.io/Portfolio/#/projects/5</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Course Experience -->
+  <url>
+    <loc>https://shane-abh.github.io/Portfolio/#/CognnizantJavaFullStackPathway</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
+
+
