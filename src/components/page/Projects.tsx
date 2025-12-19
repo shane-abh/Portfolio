@@ -29,6 +29,8 @@ export function Projects() {
               title={project.title}
               description={project.description}
               imageUrl={project.imageUrl}
+              liveUrl={project.liveUrl}
+              githubUrl={project.githubUrl}
             />
           </Link>
         ))}

@@ -1,7 +1,7 @@
 // ProjectDetail.tsx
 
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Globe, Github, ExternalLink } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import projects from "../data/projectsData";
 import { motion } from "framer-motion";
@@ -99,10 +99,37 @@ export default function ProjectDetail() {
             Back to Projects
           </button>
 
-          <h1 className="text-4xl font-bold mb-8">{project.title}</h1>
+          <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+
+          <div className="flex flex-wrap gap-3 mb-8">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors"
+              >
+                <Globe size={18} />
+                <span>Live Demo</span>
+                <ExternalLink size={14} />
+              </a>
+            )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+              >
+                <Github size={18} />
+                <span>View Source</span>
+                <ExternalLink size={14} />
+              </a>
+            )}
+          </div>
 
           <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
-            {project.title === "Budget 2025 Navigator" || project.title === "RAG Chat API" ? (
+            {project.title === "Budget 2025 Navigator" ? (
               <TaxRAGPreview compact={false} />
             ) : project.video != null ? (
               <video
@@ -166,6 +193,36 @@ export default function ProjectDetail() {
                 <li key={index}>{feature}</li>
               ))}
             </ul>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4">Links</h2>
+            <div className="flex flex-wrap gap-4">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors"
+                >
+                  <Globe size={18} />
+                  <span>Live Demo</span>
+                  <ExternalLink size={14} />
+                </a>
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+                >
+                  <Github size={18} />
+                  <span>View Source</span>
+                  <ExternalLink size={14} />
+                </a>
+              )}
+            </div>
           </section>
         </div>
       </div>
